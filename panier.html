@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>30 JOURS DE JS</title>
+</head>
+<body>
+
+
+<h1> Contenu de mon panier </h1>
+<a href="index.html"><h2>Revenir à la boutique</h2></a>
+
+<button onclick="localStorage.clear() + location.reload();">
+VIDER LE PANIER</button>
+
+
+
+<!-- Modèle de vignette produit -->
+
+
+
+
+
+<div id="listeProduits">
+       
+
+
+    <div class = vignetteProduit>
+        <img src="/WEAPONS/alien_01.webp" width="50%">
+        <p id="nomProduit"></p>
+        <p>Quantité</p>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+for (var i = 0; i < localStorage.length; i++){
+
+    alert("ya un objet !");
+}
+
+</script>
+
+</body>
+</html>
+

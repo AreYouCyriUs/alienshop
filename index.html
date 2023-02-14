@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>30 JOURS DE JS</title>
+</head>
+<body>
+
+
+
+ <!-- BODY  
+
+<div class="prez">
+
+<p> Hello ! Quel est ton nom ?</p>
+
+<input id="reqName" value="Entre ton nom" onfocus="this.value=''" type="text">
+
+<button onclick="afficher()">VALIDER</button>
+
+
+<div id="MessAccueil"></div>
+
+
+</div>
+
+-->
+
+<!-- APERCU PANIER -->
+
+
+  <div class="BTN_panier" onclick="location.href='/panier.html';">
+    <i class="fa-solid fa-bag-shopping" style="font-size: 25px;"></i>
+    <span id="info_panier"> PANIER VIDE</span>
+  </div>
+
+
+</div>
+
+<!-- MESSAGE DE BIENVEÒNUE -->
+<div class="welcome"></div>
+
+
+<div class="ex1">
+
+<h1>WEAPONS ALIEN SHOP 👽</h1>
+
+<!-- -->
+
+<!-- CATALOGUE - BORDS VERTS -->
+
+<div class = "CATALOGUE">
+
+<div class = "article_alien">
+  <img src="/WEAPONS/alien_01.webp" width="300px">
+  <p>Canon bionique</p>
+  <button onclick="ajoutPanier('canon bionique')"> AJOUTER AU PANIER </button>
+</div>
+
+<div class = "article_alien"><img src="/WEAPONS/alien_02.webp" width="300px">
+<p> Fusil laser </p>
+<button onclick="ajoutPanier('fusil laser')"> AJOUTER AU PANIER </button>
+</div>
+
+<div class = "article_alien"><img src="/WEAPONS/alien_03.webp" height="150px">
+<p> Pistolet atomique </p>
+<button onclick="ajoutPanier('pistolet atomique')"> AJOUTER AU PANIER </button>
+</div>
+
+
+
+<!-- FONCTION INCREMENT 
+
+<h2>La machine à incrémenter ! </h2>
+
+<div id="numb"> 0 </div>
+
+  <button id="btnPlus" onclick="plus()">++</button>
+  <button id="btnMoins" onclick="moins()">--</button>
+  <button id="btnReset" onclick="zero()">RESET</button>
+
+</div>
+
+-->
+
+
+ <!-- -- -- -- -- -- JAVASCRIPT  -- -- -- -- -- -->
+
+ <script type="text/javascript">
+
+
+// VARIABLES
+
+let panier = [];
+//let incr = document.getElementById("numb").getAttribute('value');
+//Fonction d'incrémentation
+
+ //Aperçu du nombre d'articles dans le panier
+ let articlesPanier = 0;
+
+
+
+function ajoutPanier(article){
+  
+  // Ajouter l'article selectionné au tableau panier
+  panier.push(article);
+  
+  //Le nombre d'article dans le panier augmente de 1
+  articlesPanier++;
+
+  //Affiche la notif dans le panier
+    document.getElementById("info_panier").innerHTML = "MON PANIER" + "("+ articlesPanier +")";
+    
+
+  let counter = 0;
+  localStorage.setItem(article, counter);
+    
+  console.log(panier);
+  console.log(localStorage);
+
+  }
+
+
+
+function plus(){
+incr++;
+document.getElementById("numb").innerHTML = incr;
+}
+
+function moins(){
+incr--;
+document.getElementById("numb").innerHTML = incr;
+}
+
+function zero(){
+incr = 0;
+document.getElementById("numb").innerHTML = incr;
+}
+
+
+  function afficher(){
+
+    let nameVisitor = document.getElementById("reqName").value;
+
+    console.log(nameVisitor);
+
+    let bienvenue = document.getElementById("MessAccueil");
+ 
+    bienvenue.innerHTML = ' Bienvenue à toi '  + nameVisitor + ' ! '
+  
+  }
+  
+  </script>
+
+
+
+</body>
+</html>
+

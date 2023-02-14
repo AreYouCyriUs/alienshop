@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  font-family:'Roboto';
+  background-color: #131417;  
+}
+
+p {
+  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+
+h1 {
+color: #c10528;
+}
+
+
+/* -- BOUTIQUE ALIEN -- */
+
+
+.CATALOGUE{
+
+  margin: auto;
+  width: 90%;
+
+  display: flex;
+  flex-wrap: wrap;
+  border : 0.2px solid rgb(0, 245, 20);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.BTN_panier{
+border: 3px solid rgb(87, 88, 87);
+padding: 20px;
+margin-bottom: 40px;
+border-radius: 40px;
+width: 20%;
+float: right;
+
+}
+
+.BTN_panier:hover{
+background-color: grey;
+transition: background-color 0.3s ease;
+
+cursor: pointer;
+}
+
+
+
+
+.article_alien{
+margin: 3%;
+
+}
+
+
+
+.vignetteProduit{
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 40%;
+border: 1px solid white;
+border-radius: 25px;
+
+
+}
