@@ -6,29 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/style.css" rel="stylesheet"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <title>30 JOURS DE JS</title>
+    <title>Alien Weapon Shop</title>
+    <script src="/scripts.js"></script>
 </head>
 <body>
 
 
 
- <!-- BODY  
-
-<div class="prez">
-
-<p> Hello ! Quel est ton nom ?</p>
-
-<input id="reqName" value="Entre ton nom" onfocus="this.value=''" type="text">
-
-<button onclick="afficher()">VALIDER</button>
-
-
-<div id="MessAccueil"></div>
-
-
-</div>
-
--->
 
 <!-- APERCU PANIER -->
 
@@ -49,7 +33,8 @@
 
 <h1>WEAPONS ALIEN SHOP 👽</h1>
 
-<!-- -->
+
+
 
 <!-- CATALOGUE - BORDS VERTS -->
 
@@ -73,88 +58,6 @@
 
 
 
-<!-- FONCTION INCREMENT 
-
-<h2>La machine à incrémenter ! </h2>
-
-<div id="numb"> 0 </div>
-
-  <button id="btnPlus" onclick="plus()">++</button>
-  <button id="btnMoins" onclick="moins()">--</button>
-  <button id="btnReset" onclick="zero()">RESET</button>
-
-</div>
-
--->
-
-
- <!-- -- -- -- -- -- JAVASCRIPT  -- -- -- -- -- -->
-
- <script type="text/javascript">
-
-
-// VARIABLES
-
-let panier = [];
-//let incr = document.getElementById("numb").getAttribute('value');
-//Fonction d'incrémentation
-
- //Aperçu du nombre d'articles dans le panier
- let articlesPanier = 0;
-
-
-
-function ajoutPanier(article){
-  
-  // Ajouter l'article selectionné au tableau panier
-  panier.push(article);
-  
-  //Le nombre d'article dans le panier augmente de 1
-  articlesPanier++;
-
-  //Affiche la notif dans le panier
-    document.getElementById("info_panier").innerHTML = "MON PANIER" + "("+ articlesPanier +")";
-    
-
-  let counter = 0;
-  localStorage.setItem(article, counter);
-    
-  console.log(panier);
-  console.log(localStorage);
-
-  }
-
-
-
-function plus(){
-incr++;
-document.getElementById("numb").innerHTML = incr;
-}
-
-function moins(){
-incr--;
-document.getElementById("numb").innerHTML = incr;
-}
-
-function zero(){
-incr = 0;
-document.getElementById("numb").innerHTML = incr;
-}
-
-
-  function afficher(){
-
-    let nameVisitor = document.getElementById("reqName").value;
-
-    console.log(nameVisitor);
-
-    let bienvenue = document.getElementById("MessAccueil");
- 
-    bienvenue.innerHTML = ' Bienvenue à toi '  + nameVisitor + ' ! '
-  
-  }
-  
-  </script>
 
 
 

@@ -1,0 +1,53 @@
+
+
+
+<!-- DEMANDE TON NOM -->
+
+<div class="prez">
+
+<p> Hello ! Quel est ton nom ?</p>
+<input id="reqName" value="Entre ton nom" onfocus="this.value=''" type="text">
+<button onclick="afficher()">VALIDER</button>
+
+<div id="MessAccueil"></div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- BOUTON INCREMENT -->
+
+<h2>La machine à incrémenter ! </h2>
+
+<div id="numb"> 0 </div>
+
+  <button id="btnPlus" onclick="plus()">++</button>
+  <button id="btnMoins" onclick="moins()">--</button>
+  <button id="btnReset" onclick="zero()">RESET</button>
+
+</div>
+
+
+<!--
+
+function plus(){
+    incr++;
+    document.getElementById("numb").innerHTML = incr;
+    }
+    
+    function moins(){
+    incr--;
+    document.getElementById("numb").innerHTML = incr;
+    }
+    
+    function zero(){
+    incr = 0;
+    document.getElementById("numb").innerHTML = incr;
+    }
+    
+    -->
