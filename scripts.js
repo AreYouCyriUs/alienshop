@@ -1,110 +1,73 @@
 console.log("Fichier script chargé!")
 
-
-
-// VARIABLES
+//////////////////////////////////// VARIABLES
 
 let panier = [];
 let articlesPanier = 0;
 let counter = 0;
 
-
-// ARTICLES 
+//////////////////////////////////// ARTICLES 
 
 let canonBio = {
 nom: 'Canon Bionique',
-prix: '199 $'
+prix: '199 $',
+image: '/WEAPONS/alien_01.webp',
+quantity: 0
 };
 
 
 let fusilLaser = {
     nom: 'Fusil Laser',
-    prix: '299 $'
+    prix: '299 $',
+    image: '/WEAPONS/alien_02.webp',
+    quantity: 0
 };
 
     
 let pistolAto = {
-    nom: 'Canon Bionique',
-    prix: '99 $'
+    nom: 'Pistolet Atomique',
+    prix: '99 $',
+    image: '/WEAPONS/alien_03.webp',
+    quantity: 0
 };
-        
 
+ //////////////////////////////////// AJOUT PANIER
+
+function addBasket(basket){
+localStorage.setItem(basket.nom, JSON.stringify(basket));
+}
 
 
 function ajoutPanier(article){
+
+if (article == "canon bionique"){
+  canonBio.quantity++
+  addBasket(canonBio);
+
+}
+else if (article == "fusil laser"){
+  fusilLaser.quantity++
+  addBasket(fusilLaser);
+}
+else if (article == "pistolet atomique"){
+  pistolAto.quantity++
+  addBasket(pistolAto);
+}
+else {
+  addBasket(null);
+}
+
   
-  // Ajouter l'article selectionné au tableau panier
-  panier.push(article);
-  
-  //Le nombre d'article dans le panier augmente de 1
-  articlesPanier++;
+panier.push(article);
+articlesPanier++;
 
-  //Affiche la notif dans le panier
-    document.getElementById("info_panier").innerHTML = "MON PANIER" + "("+ articlesPanier +")";
-    
+// NOTIF PANIER 
+document.getElementById("info_panier").innerHTML = "MON PANIER" + "("+ articlesPanier +")";
 
+console.log(localStorage);
 
-
-  localStorage.setItem('Pistolet atomique', JSON.stringify(pistolAto));
-    
-
-
-  console.log(panier);
-  console.log(localStorage);
 
   };
 
 
 
-
-
-
-
-// RECUPERATION ARTICLE(S) PANIER
-// ETAPE 1 - BOUCLE (LS LENGHT) + JSON PARSE
-
-/*
-localStorage.getItem('Pistolet atomique', JSON.parse(pistolAto);
-
-*/
-
-let recupPanier = document.getElementById('listeProduits');
-
-
-
-/*
-
-<div class='vignetteProduit'>
-    <img src='/WEAPONS/alien_01.webp' width='50%'>
-    <p id='nomProduit'></p>
-    <p>Quantité</p>
-</div>
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  function afficher(){
-
-    let nameVisitor = document.getElementById("reqName").value;
-
-    console.log(nameVisitor);
-
-    let bienvenue = document.getElementById("MessAccueil");
- 
-    bienvenue.innerHTML = ' Bienvenue à toi '  + nameVisitor + ' ! '
-  
-  }
