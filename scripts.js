@@ -31,6 +31,37 @@ let pistolAto = {
     quantity: 0
 };
 
+
+
+
+
+let articlesList = [
+
+{
+  nom: 'Canon Bionique',
+  prix: '199 $',
+  image: '/WEAPONS/alien_01.webp',
+  quantity: 0
+},
+    
+{
+  nom: 'Fusil Laser',
+  prix: '299 $',
+  image: '/WEAPONS/alien_02.webp',
+  quantity: 0
+},
+            
+{
+   nom: 'Pistolet Atomique',
+   prix: '99 $',
+   image: '/WEAPONS/alien_03.webp',
+   quantity: 0
+}
+]
+
+
+
+
  //////////////////////////////////// AJOUT PANIER
 
 function addBasket(basket){

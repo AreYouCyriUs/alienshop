@@ -1,27 +1,34 @@
 
 // RECUP PANIER
 
-function getBasket (idProduct){
+recupPanier = JSON.parse(localStorage.getItem("Canon Bionique"));
+
+//BOUCLE SUR LE PANIER ?
 
 
-let basket = localStorage.getItem()
-
-}
 
 
-// INJECTION PRODUIT DANS PAGE PANIER
 
-// CREA VIGNETTE DU PRODUIT
-function displayProduct(product) {
 
-    document.getElementById('listeProduits').innerHTML = "<div class='vignetteProduit'><p>"+ product.nom +" x"+ product.quantity +"</p><img src=" + product.image + " width='50%'></div'>"
-    }
     
-    
+
+
+let divParent = document.getElementById('listeProduits')
+
+
+
     
     for (let i = 0; i < localStorage.length; i++){
-    
-      displayProduct(pistolAto);
+
+          
+let divChild = document.createElement("div");
+
+divChild.innerHTML = "<div class='vignetteProduit'><p>"+ recupPanier.nom +" x"+ null +"</p><img src=" + canonBio.image + " width='50%'></div'>"
+
+divParent.appendChild(divChild);
+
+
+     // displayProduct(pistolAto);
       
     };
     
